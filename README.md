@@ -9,26 +9,26 @@ This project is a Netflix Clone DevSecOps implementation where I automated the c
 <ul>
     <li> Used Amazon Elastic Kubernetes Service (EKS) to deploy and manage the Netflix Clone container in a scalable Kubernetes cluster.</li>
     
-    <li> Hosted Jenkins CI/CD server on Amazon EC2 to automate the complete DevSecOps pipeline.</li>
+  <li> Hosted Jenkins CI/CD server on Amazon EC2 to automate the complete DevSecOps pipeline.</li>
   <div align="center">
   <img src="img src/ec2.png" alt="Logo" width="100%" height="100%">
   <p align="center">ec2</p>
 </div>
     
-    <li> Configured secure access control using AWS Identity and Access Management (IAM) with role-based authentication and least-privilege permissions.</li>
+  <li> Configured secure access control using AWS Identity and Access Management (IAM) with role-based authentication and least-privilege permissions.</li>
    <div align="center">
   <img src="img src/user group.png" alt="Logo" width="100%" height="100%">
   <p align="center">IAM USER GROUP</p>
 </div> 
 
     
-    <li> Exposed the application externally using an AWS-managed load balancer via Elastic Load Balancing (ELB).</li>
+  <li> Exposed the application externally using an AWS-managed load balancer via Elastic Load Balancing (ELB).</li>
   <div align="center">
   <img src="img src/load balancer.png" alt="Logo" width="100%" height="100%">
   <p align="center">load Balancer</p>
 </div>
     
-    <li> Followed AWS security best practices: IAM roles, no hardcoded credentials, secure networking, and RBAC-enabled Kubernetes access.</li>
+  <li> Followed AWS security best practices: IAM roles, no hardcoded credentials, secure networking, and RBAC-enabled Kubernetes access.</li>
     <div align="center">
   <img src="img src/roles.png" alt="Logo" width="100%" height="100%">
   <p align="center">IAM ROLES</p>
