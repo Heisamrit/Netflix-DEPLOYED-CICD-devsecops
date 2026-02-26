@@ -1,22 +1,17 @@
 <p>
-  <span style="color:#E50914; font-weight:bold;">Netflix Clone DevSecOps Implementation</span> 🚀<br><br>
+<span style="color:#e50914; font-weight:bold;">This project is a Netflix Clone DevSecOps implementation</span> 
+<span style="color:#1f77b4;">where I automated the complete CI/CD lifecycle using Jenkins.</span> 
+<span style="color:#2ca02c;">The pipeline includes code quality checks, security scanning, Docker image creation,</span> 
+<span style="color:#ff7f0e;">vulnerability analysis, and deployment to both Docker container</span> 
+<span style="color:#9467bd;">and AWS EKS Kubernetes cluster.</span>
+</p>
 
-  This project is a 
-  <span style="color:#ff9800; font-weight:bold;">Netflix Clone DevSecOps implementation</span> 
-  where I automated the complete 
-  <span style="color:#2196F3; font-weight:bold;">CI/CD lifecycle</span> 
-  using 
-  <span style="color:#d32f2f; font-weight:bold;">Jenkins</span>.  
-
-  The pipeline includes 
-  <span style="color:#4CAF50; font-weight:bold;">code quality checks</span>, 
-  <span style="color:#9C27B0; font-weight:bold;">security scanning</span>, 
-  <span style="color:#FF5722; font-weight:bold;">Docker image creation</span>, 
-  <span style="color:#795548; font-weight:bold;">vulnerability analysis</span>, 
-  and deployment to both a 
-  <span style="color:#3F51B5; font-weight:bold;">Docker container</span> 
-  and an 
-  <span style="color:#009688; font-weight:bold;">AWS EKS Kubernetes cluster</span>.
+<p>
+<span style="color:#17becf;">This project is a Netflix Clone DevSecOps implementation</span> 
+<span style="color:#d62728;">where I automated the complete CI/CD lifecycle using Jenkins.</span> 
+<span style="color:#8c564b;">The pipeline includes code quality checks, security scanning, Docker image creation,</span> 
+<span style="color:#bcbd22;">vulnerability analysis, and deployment to both Docker container</span> 
+<span style="color:#7f7f7f;">and AWS EKS Kubernetes cluster.</span>
 </p>
 
 <div align="center">
