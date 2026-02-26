@@ -5,6 +5,36 @@ This project is a Netflix Clone DevSecOps implementation where I automated the c
   <p align="center">Pipeline Overview</p>
 </div>
 
+<h3>AWS Usage Summary</h3>
+<ul>
+    <li> Used Amazon Elastic Kubernetes Service (EKS) to deploy and manage the Netflix Clone container in a scalable Kubernetes cluster.</li>
+    
+    <li> Hosted Jenkins CI/CD server on Amazon EC2 to automate the complete DevSecOps pipeline.</li>
+  <div align="center">
+  <img src="img src/ec2.png" alt="Logo" width="100%" height="100%">
+  <p align="center">ec2</p>
+</div>
+    
+    <li> Configured secure access control using AWS Identity and Access Management (IAM) with role-based authentication and least-privilege permissions.</li>
+   <div align="center">
+  <img src="img src/user group.png" alt="Logo" width="100%" height="100%">
+  <p align="center">IAM USER GROUP</p>
+</div> 
+
+    
+    <li> Exposed the application externally using an AWS-managed load balancer via Elastic Load Balancing (ELB).</li>
+  <div align="center">
+  <img src="img src/load balancer.png" alt="Logo" width="100%" height="100%">
+  <p align="center">load Balancer</p>
+</div>
+    
+    <li> Followed AWS security best practices: IAM roles, no hardcoded credentials, secure networking, and RBAC-enabled Kubernetes access.</li>
+    <div align="center">
+  <img src="img src/roles.png" alt="Logo" width="100%" height="100%">
+  <p align="center">IAM ROLES</p>
+</div>
+</ul>
+
 <h3>Clean Workspace</h3>
 <p>
 First, the pipeline cleans the Jenkins workspace to avoid conflicts from previous builds. 
@@ -99,6 +129,7 @@ to a container registry for deployment.
 <div align="center">
   <img src="img src/docker.png" alt="Logo" width="100%" height="100%">
   <p align="center">Docker</p>
+</div> 
 <h4>Builder Stage:</h4>
 <ul>
     <li>Uses Node 16 Alpine</li>
@@ -162,7 +193,7 @@ the build status — whether it is a success or a failure. This helps maintain
 visibility and transparency in the CI/CD process.
 </p>
 <div align="center">
-  <img src="img src/successmail.png" alt="Logo" width="100%" height="100%">
+  <img src="img src/success mail.png" alt="Logo" width="100%" height="100%">
   <p align="center">Notification</p>
 </div>
 <h4>This ensures:</h4>
