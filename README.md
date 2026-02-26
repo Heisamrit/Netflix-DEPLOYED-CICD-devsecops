@@ -282,4 +282,22 @@ providing proactive alerting for potential issues.
 
 
 
-<h7>THANK YOU </h7>
+<div align="center"><h2>Thank You!</h2></div
+<p>
+A big thank you for your time, attention, and interest in this project.  
+I truly appreciate the opportunity to present my work on implementing a complete DevSecOps pipeline with CI/CD automation, security integration, and cloud-native deployment.
+</p>
+<p>
+Your support and feedback are highly valued. Thank you once again!
+</p>
+<h3>Contact Information</h3>
+<p>
+<strong>Email:</strong> 
+<a href="mailto:heisamrit@gmail.com">heisamrit@gmail.com</a>
+</p>
+<p>
+<strong>LinkedIn:</strong> 
+<a href="https://www.linkedin.com/in/heisamrit" target="_blank">
+www.linkedin.com/in/heisamrit
+</a>
+</p>
