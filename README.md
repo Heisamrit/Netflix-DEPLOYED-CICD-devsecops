@@ -45,12 +45,16 @@ Jenkins orchestrates the entire DevSecOps lifecycle — from code commit
 and build processes to security scanning and final deployment to Kubernetes.
 </p>
 <div align="center">
-  <img src="img src/job executed.png" alt="Logo" width="100%" height="100%">
-  <p align="center">Job Executed</p>
+  <img src="img src/configure.png" alt="Logo" width="100%" height="100%">
+  <p align="center">CONFIGURE</p>
 </div>
 <div align="center">
   <img src="img src/jenkins credentials.png" alt="Logo" width="100%" height="100%">
   <p align="center">CREDENTIALS REQUIRED</p>
+</div>
+<div align="center">
+  <img src="img src/job executed.png" alt="Logo" width="100%" height="100%">
+  <p align="center">JOB EXECUTED</p>
 </div>
 
 
