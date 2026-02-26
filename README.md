@@ -1,4 +1,5 @@
-This project is a Netflix Clone DevSecOps implementation where I automated the complete CI/CD lifecycle using Jenkins. The pipeline includes code quality checks, security scanning, Docker image creation, vulnerability analysis, and deployment to both Docker container and AWS EKS Kubernetes cluster.This project is a Netflix Clone DevSecOps implementation where I automated the complete CI/CD lifecycle using Jenkins. The pipeline includes code quality checks, security scanning, Docker image creation, vulnerability analysis, and deployment to both Docker container and AWS EKS Kubernetes cluster.
+<h1>End-to-End DevSecOps CI/CD Pipeline for Netflix Clone on AWS EKS</h1>
+<p>This project is a Netflix Clone DevSecOps implementation where I automated the complete CI/CD lifecycle using Jenkins. The pipeline includes code quality checks, security scanning, Docker image creation, vulnerability analysis, and deployment to both Docker container and AWS EKS Kubernetes cluster.This project is a Netflix Clone DevSecOps implementation where I automated the complete CI/CD lifecycle using Jenkins. The pipeline includes code quality checks, security scanning, Docker image creation, vulnerability analysis, and deployment to both Docker container and AWS EKS Kubernetes cluster.</p>
 
 <div align="center">
   <img src="img src/pipeline.png" alt="Logo" width="100%" height="100%">
