@@ -1,37 +1,41 @@
-<p>
-<span style="color:#e50914; font-weight:bold;">This project is a Netflix Clone DevSecOps implementation</span> 
-<span style="color:#1f77b4;">where I automated the complete CI/CD lifecycle using Jenkins.</span> 
-<span style="color:#2ca02c;">The pipeline includes code quality checks, security scanning, Docker image creation,</span> 
-<span style="color:#ff7f0e;">vulnerability analysis, and deployment to both Docker container</span> 
-<span style="color:#9467bd;">and AWS EKS Kubernetes cluster.</span>
-</p>
-
-<p>
-<span style="color:#17becf;">This project is a Netflix Clone DevSecOps implementation</span> 
-<span style="color:#d62728;">where I automated the complete CI/CD lifecycle using Jenkins.</span> 
-<span style="color:#8c564b;">The pipeline includes code quality checks, security scanning, Docker image creation,</span> 
-<span style="color:#bcbd22;">vulnerability analysis, and deployment to both Docker container</span> 
-<span style="color:#7f7f7f;">and AWS EKS Kubernetes cluster.</span>
-</p>
+This project is a Netflix Clone DevSecOps implementation where I automated the complete CI/CD lifecycle using Jenkins. The pipeline includes code quality checks, security scanning, Docker image creation, vulnerability analysis, and deployment to both Docker container and AWS EKS Kubernetes cluster.This project is a Netflix Clone DevSecOps implementation where I automated the complete CI/CD lifecycle using Jenkins. The pipeline includes code quality checks, security scanning, Docker image creation, vulnerability analysis, and deployment to both Docker container and AWS EKS Kubernetes cluster.
 
 <div align="center">
   <img src="img src/pipeline.png" alt="Logo" width="100%" height="100%">
   <p align="center">Pipeline Overview</p>
 </div>
 
-<p align="center">Clean Workspace</p>
-First, the pipeline cleans the Jenkins workspace to avoid conflicts from previous builds. This ensures reproducibility and eliminates leftover artifacts.
+<h3>Clean Workspace</h3>
+<p>
+First, the pipeline cleans the Jenkins workspace to avoid conflicts from previous builds. 
+This ensures reproducibility and eliminates leftover artifacts, allowing the build 
+process to start in a fresh and consistent environment.
+</p>
 
-<p align="center">Git Checkout</p>
-In this stage, Jenkins pulls the latest code from GitHub main branch. This ensures the pipeline always works on the latest committed version.
-git link - https://github.com/Heisamrit/Netflix-clone-for-devsecops.git
+<h3>Git Checkout</h3>
+<p>
+In this stage, Jenkins pulls the latest code from the GitHub <strong>main</strong> branch. 
+This ensures the pipeline always works on the most recently committed version of the project, 
+maintaining consistency and enabling continuous integration.
+</p>
+<p>
+Repository Link: 
+<a href="https://github.com/Heisamrit/Netflix-clone-for-devsecops.git" target="_blank">
+https://github.com/Heisamrit/Netflix-clone-for-devsecops.git
+</a>
+</p>
 <div align="center">
   <img src="img src/git.png" alt="Logo" width="100%" height="100%">
   <p align="center">Git Repo</p>
 </div>
 
-<p align="center">SonarQube Code Analysis</p>
-Here I integrated static code analysis using SonarQube to detect code smells, bugs, vulnerabilities, and maintainability issues.
+<h3>SonarQube Code Analysis</h3>
+<p>
+In this stage, static code analysis is integrated using SonarQube to detect 
+code smells, bugs, security vulnerabilities, and maintainability issues. 
+This helps improve overall code quality and ensures the application 
+meets defined quality standards before deployment.
+</p>
 <div align="center">
   <img src="img src/sonarqube.png" alt="Logo" width="100%" height="100%">
   <p align="center">Snoarqube</p>
@@ -49,12 +53,20 @@ Here I integrated static code analysis using SonarQube to detect code smells, bu
 </ol>
 
 
-<p align="center">Install Dependencies</p>
-This stage installs all Node.js dependencies required for the React/Vite application
+<h3>Install Dependencies</h3>
+<p>
+This stage installs all required Node.js dependencies for the React/Vite application 
+using the package manager. It ensures that all libraries and modules defined in 
+package.json are properly installed before the build process begins.
+</p>
 
-
-<p align="center">OWASP Dependency Check</p>
-This stage performs Software Composition Analysis to identify known CVEs in third-party dependencies.
+<h3>OWASP Dependency Check</h3>
+<p>
+This stage performs Software Composition Analysis (SCA) to identify known CVEs 
+(Common Vulnerabilities and Exposures) in third-party dependencies. 
+It scans project libraries against vulnerability databases to detect 
+security risks before deployment.
+</p>
 <h3>What it does:</h3>
 <ol>
     <li>Scans <code>package.json</code></li>
@@ -63,13 +75,19 @@ This stage performs Software Composition Analysis to identify known CVEs in thir
     <li>Publishes report in Jenkins</li>
 </ol>
 
-<p align="center">Trivy File System Scan</p>
-This stage scans the entire file system for vulnerabilities and secrets.
-It scans:
-Dependencies
-Hardcoded secrets
-Misconfigurations
-IaC vulnerabilities
+<p align="center"><strong>Trivy File System Scan</strong></p>
+
+<p>
+This stage scans the entire file system for vulnerabilities and exposed secrets.
+It performs a comprehensive security check before containerization and deployment.
+</p>
+
+<ul>
+    <li>Dependencies</li>
+    <li>Hardcoded secrets</li>
+    <li>Misconfigurations</li>
+    <li>Infrastructure as Code (IaC) vulnerabilities</li>
+</ul>
 
 <p align="center">Docker Build & Push</p>
 "In this stage, the application is containerized using multi-stage Docker build."
