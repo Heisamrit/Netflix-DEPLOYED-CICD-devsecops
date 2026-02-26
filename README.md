@@ -34,6 +34,26 @@ This project is a Netflix Clone DevSecOps implementation where I automated the c
   <p align="center">IAM ROLES</p>
 </div>
 </ul>
+<h3>CI/CD Automation using Jenkins</h3>
+<p>
+The complete CI/CD pipeline for this project is automated using Jenkins. 
+It manages and executes each stage of the DevSecOps workflow in a structured 
+and reliable manner.
+</p>
+<p>
+Jenkins orchestrates the entire DevSecOps lifecycle — from code commit 
+and build processes to security scanning and final deployment to Kubernetes.
+</p>
+<div align="center">
+  <img src="img src/job executed.png" alt="Logo" width="100%" height="100%">
+  <p align="center">Job Executed</p>
+</div>
+<div align="center">
+  <img src="img src/jenkins credentials.png" alt="Logo" width="100%" height="100%">
+  <p align="center">CREDENTIALS REQUIRED</p>
+</div>
+
+
 
 <h3>Clean Workspace</h3>
 <p>
@@ -186,6 +206,22 @@ This enables scalable, highly available container orchestration in the cloud.
     <li>Apply Service YAML</li>
     <li>Restart rollout</li>
 </ol>
+
+<h3>Argo CD</h3>
+<p>
+To implement GitOps-based continuous delivery, I integrated Argo CD with the Kubernetes cluster. 
+This enables automated synchronization between the desired state defined in Git and the actual 
+state running inside the cluster.
+</p>
+<p>
+Argo CD ensures that the Kubernetes cluster state always matches the configuration stored in Git, 
+providing version control, rollback capability, and improved deployment reliability.
+</p>
+<div align="center">
+  <img src="img src/argocd.png" alt="Logo" width="100%" height="100%">
+  <p align="center">ArgoCD</p>
+</div>
+
 <h3>Email Notification</h3>
 <p>
 At the end of the pipeline, Jenkins sends an email notification regarding 
