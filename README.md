@@ -4,6 +4,10 @@ This project is a Netflix Clone DevSecOps implementation where I automated the c
   <img src="img src/pipeline.png" alt="Logo" width="100%" height="100%">
   <p align="center">Pipeline Overview</p>
 </div>
+<div align="center">
+  <img src="img src/running app.png" alt="Logo" width="100%" height="100%">
+  <p align="center">APP DEPLOYED</p>
+</div>
 
 <h3>AWS Usage Summary</h3>
 <ul>
@@ -241,3 +245,41 @@ visibility and transparency in the CI/CD process.
     <li>Monitoring</li>
     <li>Immediate alert system</li>
 </ul>
+
+<h3>Monitoring &amp; Observability</h3>
+<p>
+To implement production-grade monitoring, I integrated industry-standard tools 
+for metrics collection, alerting, and visualization within the Kubernetes environment.
+</p>
+
+<h4>Integrated Tools:</h4>
+<ul>
+    <li><strong>Prometheus</strong> – Metrics collection and alerting</li>
+      <div align="center">
+  <img src="img src/prometheus.png" alt="Logo" width="100%" height="100%">
+  <p align="center">PROMETHEUS</p>
+      </div>
+  
+  <li><strong>Grafana</strong> – Visualization dashboard</li>
+  <div align="center">
+  <img src="img src/grafana.png" alt="Logo" width="100%" height="100%">
+  <p align="center">GRAFANA</p>
+  </div>
+</ul>
+
+<p>
+This setup enables real-time monitoring of the Kubernetes cluster and application, 
+helping track resource usage, application performance, and system health while 
+providing proactive alerting for potential issues.
+</p>
+
+
+
+<div align="center">
+  <img src="img src/running app.png" alt="Logo" width="100%" height="100%">
+  <p align="center">APP DEPLOYED</p>
+</div>
+
+
+
+<h7>THANK YOU </h7>
