@@ -75,7 +75,7 @@ security risks before deployment.
     <li>Publishes report in Jenkins</li>
 </ol>
 
-<p align="center"><strong>Trivy File System Scan</strong></p>
+<h3>Trivy File System Scan</h3>
 
 <p>
 This stage scans the entire file system for vulnerabilities and exposed secrets.
@@ -89,54 +89,84 @@ It performs a comprehensive security check before containerization and deploymen
     <li>Infrastructure as Code (IaC) vulnerabilities</li>
 </ul>
 
-<p align="center">Docker Build & Push</p>
-"In this stage, the application is containerized using multi-stage Docker build."
+<h3>Docker Build &amp; Push</h3>
+<p>
+In this stage, the application is containerized using a multi-stage Docker build. 
+This approach optimizes the final image size by separating the build environment 
+from the production environment. After building the image, it is tagged and pushed 
+to a container registry for deployment.
+</p>
 <div align="center">
   <img src="img src/docker.png" alt="Logo" width="100%" height="100%">
   <p align="center">Docker</p>
-Builder Stage:
+<h4>Builder Stage:</h4>
+<ul>
+    <li>Uses Node 16 Alpine</li>
+    <li>Installs dependencies</li>
+    <li>Builds Vite production bundle</li>
+</ul>
 
-Uses Node 16 Alpine
+<h3>Trivy Image Scan</h3>
+<p>
+After building the Docker image, the image is scanned using Trivy to detect 
+OS-level and package-level vulnerabilities. This helps identify security risks 
+within the base image and installed libraries before pushing the image to the registry 
+or deploying it to the cluster.
+</p>
 
-Installs dependencies
+<h3>Deploy to Docker Container</h3>
+<p>
+Before deploying to Kubernetes, the Docker container is run locally to verify 
+that the image is functioning correctly. This step ensures the application starts 
+properly, required ports are exposed, and there are no runtime issues before 
+moving to the cluster deployment stage.
+</p>
 
-Builds Vite production bundle
+<h4>Deployment Actions:</h4>
+<ul>
+    <li>Removes old container</li>
+    <li>Pulls latest image</li>
+    <li>Runs on port 8081</li>
+    <li>Uses <code>--restart=always</code></li>
+</ul>
 
-<p align="center">Trivy Image Scan</p>
-After building the Docker image, I scan the image itself to detect OS-level and package-level vulnerabilities.
+<h3>Deploy to Kubernetes (AWS EKS)</h3>
+<p>
+Finally, the application is deployed to AWS Elastic Kubernetes Service (EKS). 
+This enables scalable, highly available container orchestration in the cloud.
+</p>
+<div align="center">
+  <img src="img src/cluster.png" alt="Logo" width="100%" height="100%">
+  <p align="center">cluster</p>
+</div>
+<div align="center">
+  <img src="img src/node groups.png" alt="Logo" width="100%" height="100%">
+  <p align="center">Node Groups</p>
+</div>
+<div align="center">
+  <img src="img src/node info.png" alt="Logo" width="100%" height="100%">
+  <p align="center">Node Info</p>
+</div>
 
-<p align="center">Deploy to Docker Container</p>
-"Before Kubernetes deployment, I run the container locally to verify the image is working correctly."
-
-It:
-
-Removes old container
-
-Pulls latest image
-
-Runs on port 8081
-
-Uses restart=always
-
-<p align="center">Deploy to Kubernetes (AWS EKS)</p>
-"Finally, the application is deployed to AWS Elastic Kubernetes Service."
-
-Steps:
-
-Update kubeconfig
-
-Apply Deployment YAML
-
-Apply Service YAML
-
-Restart rollout
-
-
-<p align="center">Email Notification</p>
-"At the end of the pipeline, Jenkins sends an email notification about build success or failure."
-
-This ensures:
-
-Monitoring
-
-Immediate alert system
+<h4>Steps:</h4>
+<ol>
+    <li>Update kubeconfig</li>
+    <li>Apply Deployment YAML</li>
+    <li>Apply Service YAML</li>
+    <li>Restart rollout</li>
+</ol>
+<h3>Email Notification</h3>
+<p>
+At the end of the pipeline, Jenkins sends an email notification regarding 
+the build status — whether it is a success or a failure. This helps maintain 
+visibility and transparency in the CI/CD process.
+</p>
+<div align="center">
+  <img src="img src/successmail.png" alt="Logo" width="100%" height="100%">
+  <p align="center">Notification</p>
+</div>
+<h4>This ensures:</h4>
+<ul>
+    <li>Monitoring</li>
+    <li>Immediate alert system</li>
+</ul>
